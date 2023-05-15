@@ -153,7 +153,7 @@ end
 
 # ╔═╡ cbcc8317-85e0-42b0-a833-40011c99a982
 begin
-	train_x, train_y = MNIST(split=:train)[:]
+	train_x, train_y = EMNIST.Balanced.traindata()
 	data_len = length(train_y)
 	inputs = [Float64.(vec(train_x[:, :, i])) for i in 1:data_len]
 	outputs = gen_out.(train_y)

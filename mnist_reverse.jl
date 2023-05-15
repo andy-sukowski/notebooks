@@ -186,13 +186,13 @@ number_slider = @bind data_idx html"<input type=range min=1 max=1000>"
 
 # ╔═╡ e039a895-f331-4ad2-b572-264edc14ebb5
 begin
-	n.a[1] = data[data_idx][1] .* 0.5 + data[data_idx + 1][1] .* 0.5
+	n.a[1] = data[data_idx][1]
 	forward!(n)
 	heatmap(rotate(reshape(last(n.a), (28, 28))), color = :greys, aspect_ratio=:equal)
 end
 
 # ╔═╡ bc529245-dd24-488b-891c-6fbd875f4191
-train_y[data_idx], train_y[data_idx+1]
+train_y[data_idx]
 
 # ╔═╡ ff2214f6-5c71-4f9a-9c93-a36527e490cb
 md"""## Cost decline"""

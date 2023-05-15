@@ -147,7 +147,7 @@ batch_size = 10
 approx_states = Vector{Vector{Float64}}(undef, batch_count)
 
 # ╔═╡ 1b6a7b1a-30db-42c1-8662-f2f13ed6cf5d
-x_range = range(0, pi * 4, 50)
+x_range = range(0, pi * 2, 50)
 
 # ╔═╡ 983745fd-f6d2-4208-b7d9-a15035403f0e
 heatmap(n.w[4])

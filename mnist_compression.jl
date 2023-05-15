@@ -95,11 +95,11 @@ md"""## Training"""
 
 # ╔═╡ b2a18f05-2348-4bc4-863c-cb0241ed9613
 begin
-	dims = [784, 121, 784]
+	dims = [784, 100, 784]
 	len = length(dims)
 	n = init(dims)
-	batch_count = 1500
-	batch_size = 40
+	batch_count = 1200
+	batch_size = 50
 end
 
 # ╔═╡ 133c3395-56c5-45d7-b769-4f5ab1b6fbd0
@@ -173,14 +173,8 @@ function rotate(m)
 	return mat
 end
 
-# ╔═╡ 74e9db89-2dff-4867-8899-ebd7c469533b
-heatmap(reshape(n.a[3], (14,14)))
-
 # ╔═╡ d813a68b-d518-4715-a7a2-7b95bbb056ba
 heatmap(n.w[2], aspect_ratio=:equal)
-
-# ╔═╡ 4d48cd07-a31e-428c-9c1d-62ead09edd00
-plot(n.b[4])
 
 # ╔═╡ 1f565833-4c7a-4ae7-abfe-8e14acec2482
 number_slider = @bind data_idx html"<input type=range min=1 max=1000>"
@@ -1674,11 +1668,9 @@ version = "1.4.1+0"
 # ╠═cbcc8317-85e0-42b0-a833-40011c99a982
 # ╟─be18fa43-44a7-43e8-a0b2-da8c481183fc
 # ╠═81cc5abb-bc29-4978-89d2-722c47149cd2
-# ╟─e039a895-f331-4ad2-b572-264edc14ebb5
-# ╠═74e9db89-2dff-4867-8899-ebd7c469533b
+# ╠═e039a895-f331-4ad2-b572-264edc14ebb5
 # ╠═4592d69d-4e11-471f-b360-aa8fbe974234
 # ╠═d813a68b-d518-4715-a7a2-7b95bbb056ba
-# ╠═4d48cd07-a31e-428c-9c1d-62ead09edd00
 # ╠═1f565833-4c7a-4ae7-abfe-8e14acec2482
 # ╟─ff2214f6-5c71-4f9a-9c93-a36527e490cb
 # ╠═9beba1d6-67ca-44b2-9764-a44031c8716e
